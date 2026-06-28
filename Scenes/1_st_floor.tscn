@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://diml8ftdmiclk" path="res://Scenes/falling_stepstone.tscn" id="1_hq1ed"]
 [ext_resource type="PackedScene" uid="uid://dlni8gdxd5w7x" path="res://Scenes/player.tscn" id="2_3m3eo"]
 [ext_resource type="AudioStream" uid="uid://cpx61snu2p6i5" path="res://Assets/Free Drum Loop - Lofi Drum Loop -  80  BPM LOFI Drum Loop.mp3" id="3_3m3eo"]
+[ext_resource type="PackedScene" uid="uid://6ujffft6i7yc" path="res://Scenes/killzone.tscn" id="4_kf4bv"]
+[ext_resource type="PackedScene" uid="uid://bwx14smqtn44v" path="res://Scenes/maze.tscn" id="5_ijw2f"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_o1l8g"]
 
@@ -40,7 +42,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.81034184, 0, 0)
 environment = SubResource("Environment_hq1ed")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1719368630]
-transform = Transform3D(-2.1113484, 4.551486, 2.8007622, -0.930151, -7.703983, 8.913677, -0.7878768, -3.1018863, -18.028769, -10.498508, 4.272147, -3.0754585)
+transform = Transform3D(1.3163369, 7.951349, -1.2101603, -0.39984488, 1.6515269, 19.715572, -2.0127354, 4.8721256, -4.7080917, -2.294775, 72.698, -126.22217)
 light_color = Color(0.851858, 0.9750914, 0.8828446, 1)
 shadow_enabled = true
 
@@ -58,6 +60,18 @@ mesh = SubResource("BoxMesh_kf4bv")
 
 [node name="step4" type="CSGMesh3D" parent="." unique_id=504391792]
 transform = Transform3D(-0.489172, -0.89372534, -0.019350309, -0.016573906, -0.045482088, 0.41199908, -0.89410484, 0.48980767, 0.002949554, -15.466273, 5.418839, 2.0045555)
+mesh = SubResource("BoxMesh_kf4bv")
+
+[node name="step5" type="CSGMesh3D" parent="." unique_id=1458226319]
+transform = Transform3D(-0.69907635, -0.74088407, -0.019350309, -0.027526423, -0.03980959, 0.41199908, -0.7412974, 0.700165, 0.0029495538, 18.126104, 10.764063, -4.24865)
+mesh = SubResource("BoxMesh_kf4bv")
+
+[node name="step6" type="CSGMesh3D" parent="." unique_id=1401555518]
+transform = Transform3D(-0.489172, -0.89372534, -0.019350309, -0.016573906, -0.045482088, 0.41199908, -0.89410484, 0.48980767, 0.002949554, 19.575602, 11.520291, -2.1193035)
+mesh = SubResource("BoxMesh_kf4bv")
+
+[node name="step7" type="CSGMesh3D" parent="." unique_id=1175070497]
+transform = Transform3D(-0.26189178, -0.98475, -0.019350309, -0.005247999, -0.04812677, 0.41199908, -0.98507494, 0.262062, 0.002949554, 19.748295, 12.077003, 0.7681068)
 mesh = SubResource("BoxMesh_kf4bv")
 
 [node name="fallingstep1" parent="." unique_id=618953826 instance=ExtResource("1_hq1ed")]
@@ -84,7 +98,7 @@ shape = SubResource("BoxShape3D_lweaw")
 transform = Transform3D(4.870108, 0, 0, 0, 4.858201, 0, 0, 0, 1.2240705, 0, 2.527022, 1.7003052)
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="wall" unique_id=379880634]
-transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 1, -0.0067756176, 0.03100586, 0.4994998)
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 1, -0.0067756176, -0.1264126, 0.4994998)
 mesh = SubResource("BoxMesh_3m3eo")
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="wall/CSGMesh3D2" unique_id=1206000193]
@@ -128,10 +142,52 @@ transform = Transform3D(0.5563971, 0, -0.8309165, 0, 1, 0, 0.8309165, 0, 0.55639
 [node name="falling_stepstone4" parent="floor3" unique_id=1045068901 instance=ExtResource("1_hq1ed")]
 transform = Transform3D(0.21509323, 0, -0.97659355, 0, 1, 0, 0.97659355, 0, 0.21509323, -10.89011, 10.095686, -11.427918)
 
+[node name="floor4" type="StaticBody3D" parent="." unique_id=458223858]
+transform = Transform3D(-0.99999726, 0, 0.0023387372, 0, 1, 0, -0.0023387372, 0, -0.99999726, 3.5248737, 6.769594, 2.037127)
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="floor4" unique_id=555940640]
+transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, -16.923412, 5.9096518, -3.499689)
+mesh = SubResource("BoxMesh_p2kwn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor4/CSGMesh3D8" unique_id=1078287106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07392608, 0)
+shape = SubResource("BoxShape3D_ggrv3")
+
+[node name="falling_stepstone" parent="floor4" unique_id=1020328108 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.89649415, 0, -0.44305554, 0, 1, 0, 0.44305554, 0, 0.89649415, -16.383686, 7.050878, -8.379179)
+
+[node name="falling_stepstone2" parent="floor4" unique_id=1939208914 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.7987195, 0, -0.6017035, 0, 1, 0, 0.6017035, 0, 0.7987195, -14.877391, 8.418799, -10.394492)
+
+[node name="falling_stepstone3" parent="floor4" unique_id=68234340 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.5563971, 0, -0.8309165, 0, 1, 0, 0.8309165, 0, 0.5563971, -13.047725, 9.479404, -10.896928)
+
+[node name="falling_stepstone4" parent="floor4" unique_id=1277275056 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.21509323, 0, -0.97659355, 0, 1, 0, 0.97659355, 0, 0.21509323, -10.89011, 10.095686, -11.427918)
+
 [node name="player" parent="." unique_id=1145062898 instance=ExtResource("2_3m3eo")]
-transform = Transform3D(-0.9988434, 0, -0.04808279, 0, 1, 0, 0.04808279, 0, -0.9988434, -0.059096336, 2.0509238, -0.4327991)
+transform = Transform3D(-0.7873048, 0, -0.029510543, 0, 0.6547284, 0, 0.037899647, 0, -0.6130345, -0.059096336, 0.84538174, -0.4327991)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1762679280]
 stream = ExtResource("3_3m3eo")
 volume_db = 10.717
 autoplay = true
+
+[node name="killzone" parent="." unique_id=1230838016 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(7.8923516, 0, 0, 0, 0.92167735, 0, 0, 0, 6.9728246, -0.5528145, 4.174157, -5.8052006)
+
+[node name="maze" parent="." unique_id=65304468 instance=ExtResource("5_ijw2f")]
+transform = Transform3D(0.81567657, 0, -0.21875155, 0, 1, 0, 0.18129422, 0, 0.98420405, 4.453786, 10.308179, -8.347185)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2058405952]
+transform = Transform3D(-0.9430659, -0.27156645, 0.19203699, 0.018024515, 0.53479576, 0.8447891, -0.33211693, 0.8001538, -0.49945262, 0.6118362, 6.629009, -0.0961039)
+light_color = Color(0.9455486, 0.9489903, 0.9934785, 1)
+light_energy = 2.444
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 6.929
+light_size = 0.408
+light_specular = 12.316
+spot_range = 111.513
+spot_attenuation = 0.84
+spot_angle = 60.51
+spot_angle_attenuation = 0.21022417

@@ -2,13 +2,13 @@ extends CharacterBody3D
 
 
 ## Movement Parameters
-@export var speed: float = 7.0
-@export var jump_velocity: float = 4.5
-@export var gravity: float = 9.8
+@export var speed: float = 5.0
+@export var jump_velocity: float = 5
+@export var gravity: float = 10
 
 ## Parkour Parameters
 @export var max_jumps: int = 2
-@export var vault_height: float = 1.5
+@export var vault_height: float = 3
 @export var vault_speed: float = 8.0
 
 # Tracking jumps
