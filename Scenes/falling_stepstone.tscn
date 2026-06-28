@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://diml8ftdmiclk"]
+
+[ext_resource type="Script" uid="uid://b8he8nihdmiaw" path="res://falling_stepstone.gd" id="1_ceas2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_k7x47"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ceas2"]
+transparency = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yvppq"]
+size = Vector3(1, 0.46588135, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p62tm"]
+size = Vector3(1, 0.44407654, 1)
+
+[sub_resource type="Animation" id="Animation_r71vd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("falling stepstone:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("falling stepstone:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.014775991, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("falling stepstone:material:albedo_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xmxr0"]
+resource_name = "fallingstone"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("falling stepstone:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.1, 0.2, 0.3, 0.4, 0.46666667, 0.56666666, 0.6666667, 0.76666665, 0.8333333, 0.93333334, 1.0333333, 1.09, 1.1566668, 1.2566667, 1.3566667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.032183874), Vector3(0, 0, -0.04644321), Vector3(0, 0, 0.030072028), Vector3(0, 0, 0), Vector3(0, 0, 0.032183874), Vector3(0, 0, -0.04644321), Vector3(0, 0, 0.030072028), Vector3(0, 0, 0), Vector3(0, 0, 0.032183874), Vector3(0, 0, -0.04644321), Vector3(0, 0, 0.030072028), Vector3(0, 0, 0), Vector3(0, 0, 0.032183874), Vector3(0, 0, -0.04644321), Vector3(0, 0, 0.030072028)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("falling stepstone:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.4333, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.014775991, 0), Vector3(0, -1.2297467, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("falling stepstone:material:albedo_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.4333333, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.4, 2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"disable_collision"
+}, {
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4yem7"]
+_data = {
+&"RESET": SubResource("Animation_r71vd"),
+&"fallingstone": SubResource("Animation_xmxr0")
+}
+
+[node name="falling_stepstone" type="StaticBody3D" unique_id=1020328108]
+script = ExtResource("1_ceas2")
+
+[node name="falling stepstone" type="CSGMesh3D" parent="." unique_id=2102819788]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.4698594, 0, 0, 0, 1, 0, -0.014775991, 0)
+mesh = SubResource("BoxMesh_k7x47")
+material = SubResource("StandardMaterial3D_ceas2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1825797533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.016998291, 0)
+shape = SubResource("BoxShape3D_yvppq")
+
+[node name="steparea" type="Area3D" parent="." unique_id=1392568986]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="steparea" unique_id=1598788458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.033958435, 0)
+shape = SubResource("BoxShape3D_p62tm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=96656492]
+libraries/ = SubResource("AnimationLibrary_4yem7")
+
+[connection signal="body_entered" from="steparea" to="." method="_on_steparea_body_entered"]

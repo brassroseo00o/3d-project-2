@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bwx14smqtn44v"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fykrw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_527cc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_527cc"]
+
+[node name="maze" type="StaticBody3D" unique_id=65304468]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=927813540]
+transform = Transform3D(27.95136, 0, 0, 0, 0.33962265, 0, 0, 0, 20.148052, 0, -0.23711777, 0)
+mesh = SubResource("BoxMesh_fykrw")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="." unique_id=1597750156]
+shape = SubResource("BoxShape3D_527cc")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="." unique_id=1188965379]
+transform = Transform3D(0.08396208, 0.33958104, 0, -5.362644, 0.0053167753, 0, 0, 0, 9.7042265, -9.514355, 2.3508182, -2.211251)
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="." unique_id=781698063]
+transform = Transform3D(0.08396208, 0.33958104, 0, -5.362644, 0.0053167753, 0, 0, 0, 20.131395, -13.839901, 2.5756447, 0)
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="sub1" type="CSGMesh3D" parent="CSGMesh3D5" unique_id=2129832362]
+transform = Transform3D(0.6430935, 4.656613e-10, 0, 1.7303647e-08, 7.533868, 0, 0, 0, 0.21328329, 0.10528782, -4.7683716e-07, 0)
+operation = 2
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="CSGMesh3D9" type="CSGMesh3D" parent="." unique_id=73214819]
+transform = Transform3D(0.09428301, 0.3389275, 0, -6.0218396, 0.005306543, 0, 0, 0, 20.131395, 14.02865, 2.4716938, -0.022117376)
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="sub2" type="CSGMesh3D" parent="CSGMesh3D9" unique_id=1729658720]
+transform = Transform3D(0.6430935, 4.656613e-10, 0, 1.7303647e-08, 7.533868, 0, 0, 0, 0.21328329, 0.10528782, -4.7683716e-07, 0)
+operation = 2
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="." unique_id=183940263]
+transform = Transform3D(0.083917946, -0.0017319508, -19.6942, -5.3626432, 0.0001453068, -0.3082378, 0.002722271, 0.33961818, -0.100302756, -3.8508584, 2.439491, 2.554748)
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="." unique_id=1601036655]
+transform = Transform3D(0.05715623, 0.0016555502, -27.921694, -5.85856, 3.3954137e-05, -0.27239743, 0.00030663682, 0.33999738, 0.1359866, 0.1924715, 2.4493415, -9.972629)
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="." unique_id=2070715297]
+transform = Transform3D(0.031801242, -0.00090789254, -27.92285, -5.858753, -4.9205223e-06, -0.15156487, 7.898673e-09, 0.34000024, -0.07456396, -0.028839111, 2.3942144, 9.981222)
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="." unique_id=16345538]
+transform = Transform3D(0.084110186, -0.004377301, -13.49042, -5.376438, 0.00014595925, -0.21115588, 0.0033796914, 0.3411194, -0.17302105, 1.3050511, 2.5459886, -6.1625338)
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="CSGMesh3D10" type="CSGMesh3D" parent="." unique_id=213168751]
+transform = Transform3D(0.084138624, -0.0011205026, -13.49146, -5.3764377, 0.00014595923, -0.21115586, 0.002576554, 0.3411456, -0.044222772, 7.48011, 2.5459886, -2.4887924)
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="CSGMesh3D11" type="CSGMesh3D" parent="." unique_id=1435267294]
+transform = Transform3D(0.0018260047, 0.34184712, 0.051954754, -5.406682, 0.00014626098, -0.14110017, -0.08463188, -0.0019677833, 9.015264, 10.313179, 2.473703, 1.8890295)
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="CSGMesh3D12" type="CSGMesh3D" parent="." unique_id=1809329081]
+transform = Transform3D(-0.005454257, 0.0036189747, 19.096722, -5.2667017, 0.00019264901, -0.019903868, -0.003166551, -0.32664484, 0.21156612, 0.8589854, 2.5459886, 6.159326)
+mesh = SubResource("BoxMesh_527cc")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="." unique_id=2132343017]
+transform = Transform3D(0.0839318, -0.33936265, 0.057278387, -5.3624434, -0.0053107324, 0.004354894, -0.002134793, -0.0022402343, -8.687167, -5.3065104, 2.4167, -1.9288244)
+mesh = SubResource("BoxMesh_527cc")

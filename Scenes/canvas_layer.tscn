@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://dpex786lqdjll"]
+
+[ext_resource type="Script" uid="uid://bmpmyilmr8lpq" path="res://Script/canvas_layer.gd" id="1_q85f0"]
+[ext_resource type="Shader" uid="uid://bokpre5r2prm7" path="res://menudistortion.gdshader" id="2_p1mel"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0qrqu"]
+shader = ExtResource("2_p1mel")
+shader_parameter/time_speed = 0.76400003629
+shader_parameter/distortion_strength = 0.5
+shader_parameter/max_distortion_strength = 2.0
+shader_parameter/separation_strength = 0.5
+shader_parameter/distortion_size = 3.45200011647
+shader_parameter/background_blur_strength = 2.466000117135
+shader_parameter/color1 = Color(18.892157, 11.708403, 11.215399, 1)
+shader_parameter/color2 = Color(0, 1, 0, 1)
+shader_parameter/color3 = Color(0, 0.6313726, 0.50980395, 1)
+shader_parameter/background_color = Color(0, 0, 0, 0.08627451)
+shader_parameter/rotation_time = 10.0
+shader_parameter/enable_rotation = true
+shader_parameter/show_text = true
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mx0kw"]
+
+[sub_resource type="SystemFont" id="SystemFont_w4oxd"]
+font_stretch = 200
+subpixel_positioning = 0
+msdf_size = 53
+
+[sub_resource type="Theme" id="Theme_fsbdh"]
+default_font = SubResource("SystemFont_w4oxd")
+default_font_size = 40
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_n6wdb"]
+
+[sub_resource type="SystemFont" id="SystemFont_g3huw"]
+subpixel_positioning = 0
+
+[sub_resource type="Theme" id="Theme_280g2"]
+default_font = SubResource("SystemFont_g3huw")
+default_font_size = 40
+
+[sub_resource type="FontFile" id="FontFile_5cw7b"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/75/0/ascent = 0.0
+cache/0/75/0/descent = 0.0
+cache/0/75/0/underline_position = 0.0
+cache/0/75/0/underline_thickness = 0.0
+cache/0/75/0/scale = 1.0
+cache/0/76/0/ascent = 0.0
+cache/0/76/0/descent = 0.0
+cache/0/76/0/underline_position = 0.0
+cache/0/76/0/underline_thickness = 0.0
+cache/0/76/0/scale = 1.0
+cache/0/77/0/ascent = 0.0
+cache/0/77/0/descent = 0.0
+cache/0/77/0/underline_position = 0.0
+cache/0/77/0/underline_thickness = 0.0
+cache/0/77/0/scale = 1.0
+cache/0/78/0/ascent = 0.0
+cache/0/78/0/descent = 0.0
+cache/0/78/0/underline_position = 0.0
+cache/0/78/0/underline_thickness = 0.0
+cache/0/78/0/scale = 1.0
+cache/0/79/0/ascent = 0.0
+cache/0/79/0/descent = 0.0
+cache/0/79/0/underline_position = 0.0
+cache/0/79/0/underline_thickness = 0.0
+cache/0/79/0/scale = 1.0
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/81/0/ascent = 0.0
+cache/0/81/0/descent = 0.0
+cache/0/81/0/underline_position = 0.0
+cache/0/81/0/underline_thickness = 0.0
+cache/0/81/0/scale = 1.0
+cache/0/82/0/ascent = 0.0
+cache/0/82/0/descent = 0.0
+cache/0/82/0/underline_position = 0.0
+cache/0/82/0/underline_thickness = 0.0
+cache/0/82/0/scale = 1.0
+cache/0/83/0/ascent = 0.0
+cache/0/83/0/descent = 0.0
+cache/0/83/0/underline_position = 0.0
+cache/0/83/0/underline_thickness = 0.0
+cache/0/83/0/scale = 1.0
+cache/0/84/0/ascent = 0.0
+cache/0/84/0/descent = 0.0
+cache/0/84/0/underline_position = 0.0
+cache/0/84/0/underline_thickness = 0.0
+cache/0/84/0/scale = 1.0
+cache/0/85/0/ascent = 0.0
+cache/0/85/0/descent = 0.0
+cache/0/85/0/underline_position = 0.0
+cache/0/85/0/underline_thickness = 0.0
+cache/0/85/0/scale = 1.0
+cache/0/86/0/ascent = 0.0
+cache/0/86/0/descent = 0.0
+cache/0/86/0/underline_position = 0.0
+cache/0/86/0/underline_thickness = 0.0
+cache/0/86/0/scale = 1.0
+cache/0/87/0/ascent = 0.0
+cache/0/87/0/descent = 0.0
+cache/0/87/0/underline_position = 0.0
+cache/0/87/0/underline_thickness = 0.0
+cache/0/87/0/scale = 1.0
+cache/0/88/0/ascent = 0.0
+cache/0/88/0/descent = 0.0
+cache/0/88/0/underline_position = 0.0
+cache/0/88/0/underline_thickness = 0.0
+cache/0/88/0/scale = 1.0
+cache/0/89/0/ascent = 0.0
+cache/0/89/0/descent = 0.0
+cache/0/89/0/underline_position = 0.0
+cache/0/89/0/underline_thickness = 0.0
+cache/0/89/0/scale = 1.0
+cache/0/90/0/ascent = 0.0
+cache/0/90/0/descent = 0.0
+cache/0/90/0/underline_position = 0.0
+cache/0/90/0/underline_thickness = 0.0
+cache/0/90/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_as1ww"]
+font = SubResource("FontFile_5cw7b")
+font_size = 90
+font_color = Color(0.1882353, 0.12941177, 0.32156864, 1)
+outline_size = 30
+outline_color = Color(0.05490196, 0.09803922, 0.02745098, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=535350732]
+script = ExtResource("1_q85f0")
+
+[node name="MainMenu" type="Control" parent="." unique_id=1151683206]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="MainMenu" unique_id=1061184494]
+material = SubResource("ShaderMaterial_0qrqu")
+layout_mode = 0
+offset_left = -5.0
+offset_right = 1165.0
+offset_bottom = 652.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu" unique_id=2051785863]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00086805556
+anchor_right = 1.0034722
+anchor_bottom = 1.0061729
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="play" type="Button" parent="MainMenu/VBoxContainer" unique_id=793952312]
+modulate = Color(1.0556842, 1.0556843, 1.0556843, 1)
+self_modulate = Color(0.25882354, 0, 0.6117647, 1)
+material = SubResource("CanvasItemMaterial_mx0kw")
+layout_mode = 2
+theme = SubResource("Theme_fsbdh")
+text = "Play"
+icon_alignment = 1
+
+[node name="quit" type="Button" parent="MainMenu/VBoxContainer" unique_id=1633940891]
+modulate = Color(0.6046953, 0.6046953, 0.6046953, 1)
+self_modulate = Color(0.25882354, 0.13333334, 0.2901961, 1)
+material = SubResource("CanvasItemMaterial_n6wdb")
+layout_mode = 2
+theme = SubResource("Theme_280g2")
+text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=4096229]
+offset_left = 391.0
+offset_top = 107.0
+offset_right = 775.0
+offset_bottom = 228.0
+text = "SpikeTrap"
+label_settings = SubResource("LabelSettings_as1ww")
+
+[connection signal="pressed" from="MainMenu/VBoxContainer/play" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/quit" to="." method="_on_quit_button_pressed"]
