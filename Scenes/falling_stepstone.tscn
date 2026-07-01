@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://diml8ftdmiclk"]
 
-[ext_resource type="Script" uid="uid://b8he8nihdmiaw" path="res://falling_stepstone.gd" id="1_ceas2"]
+[ext_resource type="Script" uid="uid://b8he8nihdmiaw" path="res://Script/falling_stepstone.gd" id="1_ceas2"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_k7x47"]
 
