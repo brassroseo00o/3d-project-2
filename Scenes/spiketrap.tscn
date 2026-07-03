@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b38ucuk3kvn7q"]
 
 [ext_resource type="PackedScene" uid="uid://w12k4ygha8fd" path="res://Assets/Spiketrap.glb" id="1_n8ddt"]
+[ext_resource type="Script" uid="uid://yrgd70qobifq" path="res://Script/spiketrap.gd" id="2_3yphm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n8ddt"]
 albedo_color = Color(1, 0.8235294, 0.14117648, 1)
@@ -11,6 +12,7 @@ clearcoat_enabled = true
 clearcoat_roughness = 0.0
 
 [node name="Spiketrap" unique_id=512925584 instance=ExtResource("1_n8ddt")]
+script = ExtResource("2_3yphm")
 
 [node name="Cube" parent="." index="0" unique_id=796511212]
 surface_material_override/0 = SubResource("StandardMaterial3D_n8ddt")

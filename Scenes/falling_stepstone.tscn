@@ -1,17 +1,20 @@
 [gd_scene format=3 uid="uid://diml8ftdmiclk"]
 
 [ext_resource type="Script" uid="uid://b8he8nihdmiaw" path="res://Script/falling_stepstone.gd" id="1_ceas2"]
+[ext_resource type="Texture2D" uid="uid://dph4kkj0komq4" path="res://Assets/purplemarble.jpg" id="2_yvppq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_k7x47"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ceas2"]
 transparency = 1
+albedo_texture = ExtResource("2_yvppq")
+albedo_texture_force_srgb = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yvppq"]
-size = Vector3(1, 0.46588135, 1)
+size = Vector3(1.6719971, 0.5121155, 1.244812)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p62tm"]
-size = Vector3(1, 0.44407654, 1)
+size = Vector3(1, 0.44407654, 2.59021)
 
 [sub_resource type="Animation" id="Animation_r71vd"]
 length = 0.001
@@ -119,18 +122,18 @@ _data = {
 script = ExtResource("1_ceas2")
 
 [node name="falling stepstone" type="CSGMesh3D" parent="." unique_id=2102819788]
-transform = Transform3D(0.9999999, 0, 0, 0, 0.4698594, 0, 0, 0, 1, 0, -0.014775991, 0)
+transform = Transform3D(1.6674906, 0, 0, 0, 0.4698594, 0, 0, 0, 2.6103039, 0, -0.014775991, 0)
 mesh = SubResource("BoxMesh_k7x47")
 material = SubResource("StandardMaterial3D_ceas2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1825797533]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.016998291, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0004272461, 0.0061187744, -0.01308623)
 shape = SubResource("BoxShape3D_yvppq")
 
 [node name="steparea" type="Area3D" parent="." unique_id=1392568986]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="steparea" unique_id=1598788458]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.033958435, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.033958435, -0.012512207)
 shape = SubResource("BoxShape3D_p62tm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=96656492]

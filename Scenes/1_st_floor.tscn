@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://cnnlufv3ix02g"]
 
 [ext_resource type="PackedScene" uid="uid://diml8ftdmiclk" path="res://Scenes/falling_stepstone.tscn" id="1_hq1ed"]
+[ext_resource type="Texture2D" uid="uid://ucxavyqvv80g" path="res://Assets/galaxy panorama.png" id="1_ijw2f"]
 [ext_resource type="PackedScene" uid="uid://dlni8gdxd5w7x" path="res://Scenes/player.tscn" id="2_3m3eo"]
 [ext_resource type="AudioStream" uid="uid://cpx61snu2p6i5" path="res://Assets/Free Drum Loop - Lofi Drum Loop -  80  BPM LOFI Drum Loop.mp3" id="3_3m3eo"]
+[ext_resource type="Texture2D" uid="uid://b8ajbu175b38t" path="res://Assets/luxury-marble-texture_gold.jpg" id="3_p60ml"]
+[ext_resource type="Texture2D" uid="uid://dph4kkj0komq4" path="res://Assets/purplemarble.jpg" id="4_57xqa"]
 [ext_resource type="PackedScene" uid="uid://6ujffft6i7yc" path="res://Scenes/killzone.tscn" id="4_kf4bv"]
+[ext_resource type="PackedScene" uid="uid://b38ucuk3kvn7q" path="res://Scenes/spiketrap.tscn" id="5_etq20"]
 [ext_resource type="PackedScene" uid="uid://bwx14smqtn44v" path="res://Scenes/maze.tscn" id="5_ijw2f"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_o1l8g"]
+panorama = ExtResource("1_ijw2f")
 
 [sub_resource type="Sky" id="Sky_swpxd"]
 sky_material = SubResource("PanoramaSkyMaterial_o1l8g")
@@ -14,29 +19,48 @@ sky_material = SubResource("PanoramaSkyMaterial_o1l8g")
 [sub_resource type="Environment" id="Environment_hq1ed"]
 background_mode = 2
 sky = SubResource("Sky_swpxd")
-sky_rotation = Vector3(-3.7297685, -0.2146755, -1.4905112)
+sky_rotation = Vector3(0.12740904, -2.3335052, -2.7628562)
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="BoxMesh" id="BoxMesh_kf4bv"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_p2kwn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3evm"]
+albedo_texture = ExtResource("3_p60ml")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lweaw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3m3eo"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c818e"]
+albedo_texture = ExtResource("4_57xqa")
+albedo_texture_force_srgb = true
+
 [sub_resource type="BoxMesh" id="BoxMesh_lweaw"]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hq1ed"]
-data = PackedVector3Array(-0.5, -0.5, -0.5, -0.103466235, -0.21982995, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.103466235, -0.21982995, -0.5, -0.103466235, -0.21982995, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.103466235, -0.21982995, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.103466235, 0.35992602, 0.5, -0.103466235, -0.21982995, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.103466235, -0.21982995, -0.5, -0.103466235, 0.35992602, -0.5, -0.5, 0.5, -0.5, -0.103466235, 0.35992602, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.103466235, 0.35992602, 0.5, -0.5, 0.5, 0.5, 0.103466235, 0.35992602, 0.5, -0.103466235, 0.35992602, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.103466235, -0.21982995, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.103466235, 0.35992602, -0.5, 0.103466235, -0.21982995, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.103466235, -0.21982995, 0.5, 0.103466235, -0.21982995, 0.5, 0.5, -0.5, 0.5, 0.103466235, -0.21982995, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.103466235, 0.35992602, -0.5, 0.103466235, 0.35992602, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.103466235, 0.35992602, -0.5, 0.5, 0.5, 0.5, 0.103466235, -0.21982995, 0.5, 0.103466235, 0.35992602, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.103466235, 0.35992602, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.103466235, -0.21982995, -0.5, 0.103466235, -0.21982995, -0.5, -0.103466235, -0.21982995, 0.5, -0.103466235, 0.35992602, 0.5, -0.103466235, -0.21982995, -0.5, -0.103466235, -0.21982995, 0.5, -0.103466235, -0.21982995, -0.5, -0.103466235, 0.35992602, 0.5, -0.103466235, 0.35992602, -0.5, 0.103466235, 0.35992602, 0.5, -0.103466235, 0.35992602, -0.5, -0.103466235, 0.35992602, 0.5, 0.103466235, 0.35992602, -0.5, 0.103466235, -0.21982995, 0.5, 0.103466235, -0.21982995, -0.5, -0.103466235, -0.21982995, 0.5, 0.103466235, -0.21982995, -0.5, 0.103466235, -0.21982995, 0.5, -0.103466235, 0.35992602, -0.5, 0.103466235, 0.35992602, 0.5, 0.103466235, 0.35992602, -0.5, 0.103466235, -0.21982995, 0.5, 0.103466235, 0.35992602, -0.5, 0.103466235, 0.35992602, 0.5)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ijw2f"]
+data = PackedVector3Array(-0.5, -0.5, -0.5, -0.3635058, -0.21982995, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.3635058, -0.21982995, -0.5, -0.3635058, -0.21982995, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.3635058, 0.35992602, 0.5, -0.3635058, -0.21982995, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.3635058, -0.21982995, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.3635058, -0.21982995, -0.5, -0.3635058, 0.35992602, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.3635058, 0.35992602, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.3635058, 0.35992602, 0.5, -0.5, 0.5, 0.5, 0.3635058, 0.35992602, 0.5, -0.3635058, 0.35992602, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.3635058, -0.21982995, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.3635058, 0.35992602, -0.5, 0.3635058, -0.21982995, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.3635058, -0.21982995, 0.5, 0.3635058, -0.21982995, 0.5, 0.5, -0.5, 0.5, 0.3635058, -0.21982995, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.3635058, 0.35992602, -0.5, 0.3635058, 0.35992602, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.3635058, 0.35992602, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.3635058, 0.35992602, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.3635058, -0.21982995, 0.5, 0.3635058, 0.35992602, 0.5, -0.3635058, -0.21982995, 0.5, -0.3635058, -0.21982995, -0.5, 0.3635058, -0.21982995, -0.5, -0.3635058, -0.21982995, 0.5, -0.3635058, 0.35992602, 0.5, -0.3635058, -0.21982995, -0.5, -0.3635058, -0.21982995, -0.5, -0.3635058, 0.35992602, 0.5, -0.3635058, 0.35992602, -0.5, -0.3635058, 0.35992602, -0.5, -0.3635058, 0.35992602, 0.5, 0.3635058, 0.35992602, 0.5, 0.3635058, -0.21982995, -0.5, 0.3635058, 0.35992602, -0.5, 0.3635058, -0.21982995, 0.5, 0.3635058, -0.21982995, -0.5, 0.3635058, -0.21982995, 0.5, -0.3635058, -0.21982995, 0.5, 0.3635058, 0.35992602, 0.5, 0.3635058, 0.35992602, -0.5, -0.3635058, 0.35992602, -0.5, 0.3635058, -0.21982995, 0.5, 0.3635058, 0.35992602, -0.5, 0.3635058, 0.35992602, 0.5)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ijw2f"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xt87d"]
+albedo_texture = ExtResource("3_p60ml")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jhm2p"]
+albedo_texture = ExtResource("3_p60ml")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ggrv3"]
+size = Vector3(4.735962, 0.4579773, 4.848938)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6g0eb"]
+albedo_texture = ExtResource("3_p60ml")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kf4bv"]
 data = PackedVector3Array(-0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kx4vv"]
+albedo_texture = ExtResource("3_p60ml")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pgt41"]
+albedo_texture = ExtResource("3_p60ml")
 
 [node name="1st floor main" type="Node3D" unique_id=1882803976]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.81034184, 0, 0)
@@ -49,42 +73,14 @@ transform = Transform3D(1.3163369, 7.951349, -1.2101603, -0.39984488, 1.6515269,
 light_color = Color(0.851858, 0.9750914, 0.8828446, 1)
 shadow_enabled = true
 
-[node name="step1" type="CSGMesh3D" parent="." unique_id=919527632]
-transform = Transform3D(-0.8071292, -0.62119836, -0.019350309, -0.03345812, -0.034963656, 0.41199905, -0.6216193, 0.8084648, 0.002949553, -0.06447792, 0.3155973, 4.238378)
-mesh = SubResource("BoxMesh_kf4bv")
-
-[node name="step2" type="CSGMesh3D" parent="." unique_id=1324792957]
-transform = Transform3D(-0.8071292, -0.62119836, -0.019350309, -0.03345812, -0.034963656, 0.41199905, -0.6216193, 0.8084648, 0.002949553, -12.153674, 4.09025, 5.9888744)
-mesh = SubResource("BoxMesh_kf4bv")
-
-[node name="step3" type="CSGMesh3D" parent="." unique_id=810814980]
-transform = Transform3D(-0.5633193, -0.8488669, -0.019350309, -0.020377418, -0.043907184, 0.41199908, -0.84926057, 0.56411195, 0.0029495538, -14.007816, 4.601527, 4.2168684)
-mesh = SubResource("BoxMesh_kf4bv")
-
-[node name="step4" type="CSGMesh3D" parent="." unique_id=504391792]
-transform = Transform3D(-0.489172, -0.89372534, -0.019350309, -0.016573906, -0.045482088, 0.41199908, -0.89410484, 0.48980767, 0.002949554, -15.466273, 5.418839, 2.0045555)
-mesh = SubResource("BoxMesh_kf4bv")
-
-[node name="step5" type="CSGMesh3D" parent="." unique_id=1458226319]
-transform = Transform3D(-0.69907635, -0.74088407, -0.019350309, -0.027526423, -0.03980959, 0.41199908, -0.7412974, 0.700165, 0.0029495538, 18.126104, 10.764063, -4.24865)
-mesh = SubResource("BoxMesh_kf4bv")
-
-[node name="step6" type="CSGMesh3D" parent="." unique_id=1401555518]
-transform = Transform3D(-0.489172, -0.89372534, -0.019350309, -0.016573906, -0.045482088, 0.41199908, -0.89410484, 0.48980767, 0.002949554, 19.575602, 11.520291, -2.1193035)
-mesh = SubResource("BoxMesh_kf4bv")
-
-[node name="step7" type="CSGMesh3D" parent="." unique_id=1175070497]
-transform = Transform3D(-0.26189178, -0.98475, -0.019350309, -0.005247999, -0.04812677, 0.41199908, -0.98507494, 0.262062, 0.002949554, 19.748295, 12.077003, 0.7681068)
-mesh = SubResource("BoxMesh_kf4bv")
-
 [node name="fallingstep1" parent="." unique_id=618953826 instance=ExtResource("1_hq1ed")]
-transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -0.6408243, 0.9886879, 6.3593893)
+transform = Transform3D(-0.42246014, 0, -0.9063815, 0, 1, 0, 0.9063815, 0, -0.42246014, -0.44372046, 0.46392, 5.7392488)
 
 [node name="fallingstep2" parent="." unique_id=1123989856 instance=ExtResource("1_hq1ed")]
-transform = Transform3D(0.8742556, 0, -0.48546588, 0, 1, 0, 0.48546588, 0, 0.8742556, -2.8326635, 1.8057194, 7.6838646)
+transform = Transform3D(-0.9289906, 0, -0.37010336, 0, 1, 0, 0.37010336, 0, -0.9289906, -2.4936378, 1.8436177, 7.5487986)
 
-[node name="fallingstep3" parent="." unique_id=1674966235 instance=ExtResource("1_hq1ed")]
-transform = Transform3D(0.7188182, 0, -0.695198, 0, 1, 0, 0.695198, 0, 0.7188182, -4.8326635, 2.4564595, 7.6838646)
+[node name="fallingstep3" parent="." unique_id=1020328108 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.9766648, 0, 0.21476957, 0, 1, 0, -0.21476957, 0, -0.9766648, -4.550852, 3.1914685, 8.936595)
 
 [node name="startingpoint" type="StaticBody3D" parent="." unique_id=1934347930]
 transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, 0, 0, 0)
@@ -92,91 +88,218 @@ transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, 0, 0
 [node name="CSGMesh3D" type="CSGMesh3D" parent="startingpoint" unique_id=305246410]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_p2kwn")
+material = SubResource("StandardMaterial3D_r3evm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="startingpoint" unique_id=1938308315]
 transform = Transform3D(0.99917006, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_lweaw")
 
 [node name="wall" type="StaticBody3D" parent="." unique_id=1825211030]
-transform = Transform3D(4.870108, 0, 0, 0, 4.858201, 0, 0, 0, 1.2240705, 0, 2.527022, 1.7003052)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.527022, 1.7003052)
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="wall" unique_id=379880634]
-transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 1, -0.0067756176, -0.1264126, 0.4994998)
+transform = Transform3D(4.920051, 0, 0, 0, 5.7743077, 0, 0, 0, 1.6755013, -0.0067756176, -0.9879056, 0.5633178)
 mesh = SubResource("BoxMesh_3m3eo")
+material = SubResource("StandardMaterial3D_c818e")
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="wall/CSGMesh3D2" unique_id=1206000193]
 transform = Transform3D(0.7270116, 0, 0, 0, 0.57975596, 0, 0, 0, 2.9921591, 0, 0.070048034, -0.005721092)
 operation = 2
 mesh = SubResource("BoxMesh_lweaw")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="wall" unique_id=1382143953]
-transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 1, -0.0067756176, 0.03100586, 0.4994998)
-shape = SubResource("ConcavePolygonShape3D_hq1ed")
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="wall" unique_id=1306470706]
+transform = Transform3D(4.9200506, 0, 0, 0, 5.7743073, 0, 0, 0, 1.6755013, -0.0067756176, -0.9879056, 0.5633178)
+shape = SubResource("ConcavePolygonShape3D_ijw2f")
 
-[node name="floor2" type="StaticBody3D" parent="." unique_id=1766421832]
-transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, -8.334383, 3.3710394, 6.443404)
+[node name="Spiketrap" parent="wall" unique_id=512925584 instance=ExtResource("5_etq20")]
+transform = Transform3D(1.1246759, 0, 1.2909678, 0, 1.5849621, 0, -1.1005569, 0, 1.3192596, 17.075197, 5.312119, 11.571871)
 
-[node name="mesh" type="CSGMesh3D" parent="floor2" unique_id=1158876164]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("BoxMesh_p2kwn")
+[node name="Spiketrap2" parent="wall" unique_id=1090386094 instance=ExtResource("5_etq20")]
+transform = Transform3D(1.2629579, 0, -1.4022729, 0, 1.5849621, 0, 1.4754975, 0, 1.2002813, 0.8374343, 10.7956, 10.500025)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor2/mesh" unique_id=894543085]
-shape = SubResource("BoxShape3D_ijw2f")
+[node name="Spiketrap4" parent="wall" unique_id=849567755 instance=ExtResource("5_etq20")]
+transform = Transform3D(-1.1311413, 0, -1.5319802, 0, 1.5849621, 0, 1.6830621, 0, -1.0296028, -1.8551798, 16.022997, -9.867555)
+
+[node name="Spiketrap3" parent="wall" unique_id=509029603 instance=ExtResource("5_etq20")]
+transform = Transform3D(-1.8896013, 0, 0.7048722, 0, 1.5849621, 0, -0.7090878, 0, -1.8783677, 13.017898, 21.331953, -17.225561)
 
 [node name="floor3" type="StaticBody3D" parent="." unique_id=1374316590]
 
 [node name="CSGMesh3D8" type="CSGMesh3D" parent="floor3" unique_id=1207025877]
-transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, -16.923412, 5.9096518, -3.499689)
+transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, -15.89532, 5.9096518, -2.3066635)
 mesh = SubResource("BoxMesh_p2kwn")
+material = SubResource("StandardMaterial3D_xt87d")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor3/CSGMesh3D8" unique_id=1015719029]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07392608, 0)
+[node name="CSGMesh3D9" type="CSGMesh3D" parent="floor3" unique_id=812919707]
+transform = Transform3D(4.6699615, 0, -1.1875618, 0, 0.34465295, 0, 1.1671228, 0, 4.751743, -8.414784, 4.040332, 8.582705)
+mesh = SubResource("BoxMesh_p2kwn")
+material = SubResource("StandardMaterial3D_jhm2p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor3" unique_id=1015719029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.865937, 5.8931804, -2.3236322)
 shape = SubResource("BoxShape3D_ggrv3")
 
 [node name="falling_stepstone" parent="floor3" unique_id=1981197355 instance=ExtResource("1_hq1ed")]
-transform = Transform3D(0.89649415, 0, -0.44305554, 0, 1, 0, 0.44305554, 0, 0.89649415, -16.383686, 7.050878, -8.379179)
+transform = Transform3D(-0.075745605, -0.0021768557, -0.9971248, 0.0108824335, 0.99993634, -0.0030096648, 0.99706787, -0.011079116, -0.0757171, -16.09085, 7.0554843, -6.745511)
+
+[node name="falling_stepstone5" parent="floor3" unique_id=1382970071 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.1577945, -0.002176856, -0.9874696, 0.011283815, 0.99993634, -0.0004012186, 0.98740757, -0.011079116, 0.15780896, -15.667149, 5.4893937, 2.5337899)
+
+[node name="falling_stepstone6" parent="floor3" unique_id=427507180 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.7321362, -0.0021768552, -0.68115485, 0.009140287, 0.99993634, 0.006628773, 0.681097, -0.011079115, 0.7321094, -13.326957, 4.417089, 5.515368)
 
 [node name="falling_stepstone2" parent="floor3" unique_id=1909080144 instance=ExtResource("1_hq1ed")]
-transform = Transform3D(0.7987195, 0, -0.6017035, 0, 1, 0, 0.6017035, 0, 0.7987195, -14.877391, 8.418799, -10.394492)
+transform = Transform3D(-0.49457908, 0, -0.8691327, 0, 1, 0, 0.8691327, 0, -0.49457908, -15.400685, 7.7998075, -9.775681)
 
 [node name="falling_stepstone3" parent="floor3" unique_id=2085393333 instance=ExtResource("1_hq1ed")]
-transform = Transform3D(0.5563971, 0, -0.8309165, 0, 1, 0, 0.8309165, 0, 0.5563971, -13.047725, 9.479404, -10.896928)
+transform = Transform3D(-0.9624742, 0, -0.27137327, 0, 1, 0, 0.27137327, 0, -0.9624742, -13.237786, 8.842775, -11.549389)
 
 [node name="falling_stepstone4" parent="floor3" unique_id=1045068901 instance=ExtResource("1_hq1ed")]
-transform = Transform3D(0.21509323, 0, -0.97659355, 0, 1, 0, 0.97659355, 0, 0.21509323, -10.89011, 10.095686, -11.427918)
+transform = Transform3D(-0.97258544, 0, 0.23254584, 0, 1, 0, -0.23254584, 0, -0.97258544, -11.018902, 10.095686, -11.913595)
 
 [node name="floor4" type="StaticBody3D" parent="." unique_id=458223858]
 transform = Transform3D(-0.99999726, 0, 0.0023387372, 0, 1, 0, -0.0023387372, 0, -0.99999726, 3.5248737, 6.769594, 2.037127)
 
 [node name="CSGMesh3D8" type="CSGMesh3D" parent="floor4" unique_id=555940640]
-transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, -16.923412, 5.9096518, -3.499689)
+transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, -18.445871, 5.9096518, -4.0830345)
 mesh = SubResource("BoxMesh_p2kwn")
+material = SubResource("StandardMaterial3D_6g0eb")
 
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="floor4" unique_id=1252694020]
 shape = SubResource("ConcavePolygonShape3D_kf4bv")
 
-[node name="falling_stepstone" parent="floor4" unique_id=1020328108 instance=ExtResource("1_hq1ed")]
-transform = Transform3D(0.89649415, 0, -0.44305554, 0, 1, 0, 0.44305554, 0, 0.89649415, -16.383686, 7.050878, -8.379179)
+[node name="falling_stepstone" parent="floor4" unique_id=369269333 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.22578429, 0, -0.9741773, 0, 1, 0, 0.9741773, 0, -0.22578429, -18.083023, 7.050878, -7.9219656)
+
+[node name="falling_stepstone5" parent="floor4" unique_id=100710716 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.8103486, 0, -0.58594805, 0, 1, 0, 0.58594805, 0, 0.8103486, -15.707177, 3.945467, 5.770951)
+
+[node name="falling_stepstone6" parent="floor4" unique_id=1040079033 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.5104229, 0, -0.8599235, 0, 1, 0, 0.8599235, 0, 0.5104229, -18.439932, 4.6821938, 3.1775475)
+
+[node name="falling_stepstone7" parent="floor4" unique_id=122199510 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.037219316, 0, -0.99930704, 0, 1, 0, 0.99930704, 0, 0.037219316, -18.606276, 5.823433, 0.5859441)
 
 [node name="falling_stepstone2" parent="floor4" unique_id=1939208914 instance=ExtResource("1_hq1ed")]
-transform = Transform3D(0.7987195, 0, -0.6017035, 0, 1, 0, 0.6017035, 0, 0.7987195, -14.877391, 8.418799, -10.394492)
+transform = Transform3D(-0.4947915, 0, -0.86901164, 0, 1, 0, 0.86901164, 0, -0.4947915, -16.8285, 8.418799, -10.154601)
 
 [node name="falling_stepstone3" parent="floor4" unique_id=68234340 instance=ExtResource("1_hq1ed")]
-transform = Transform3D(0.5563971, 0, -0.8309165, 0, 1, 0, 0.8309165, 0, 0.5563971, -13.047725, 9.479404, -10.896928)
+transform = Transform3D(-0.7689981, 0, -0.6392511, 0, 1, 0, 0.6392511, 0, -0.7689981, -14.81881, 9.479404, -12.266568)
 
 [node name="falling_stepstone4" parent="floor4" unique_id=1277275056 instance=ExtResource("1_hq1ed")]
-transform = Transform3D(0.21509323, 0, -0.97659355, 0, 1, 0, 0.97659355, 0, 0.21509323, -10.89011, 10.095686, -11.427918)
+transform = Transform3D(-0.9603861, 0, -0.27867258, 0, 1, 0, 0.27867258, 0, -0.9603861, -12.910239, 11.30496, -12.5954895)
+
+[node name="floor5" type="StaticBody3D" parent="." unique_id=1617406356]
+transform = Transform3D(-0.078528754, 0, 0.9969118, 0, 1, 0, -0.9969118, 0, -0.078528754, 11.789307, 13.602562, -3.5616822)
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="floor5" unique_id=1608254939]
+transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, -18.445871, 5.9096518, -4.0830345)
+mesh = SubResource("BoxMesh_p2kwn")
+material = SubResource("StandardMaterial3D_kx4vv")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="floor5" unique_id=636068434]
+shape = SubResource("ConcavePolygonShape3D_kf4bv")
+
+[node name="falling_stepstone" parent="floor5" unique_id=1084339222 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.22578429, 0, -0.9741773, 0, 1, 0, 0.9741773, 0, -0.22578429, -18.083023, 7.050878, -7.9219656)
+
+[node name="falling_stepstone7" parent="floor5" unique_id=1258894267 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.037219316, 0, -0.99930704, 0, 1, 0, 0.99930704, 0, 0.037219316, -18.606276, 5.823433, 0.5859441)
+
+[node name="falling_stepstone2" parent="floor5" unique_id=1126437600 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.4947915, 0, -0.86901164, 0, 1, 0, 0.86901164, 0, -0.4947915, -16.8285, 8.418799, -10.154601)
+
+[node name="falling_stepstone3" parent="floor5" unique_id=264279423 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.7689981, 0, -0.6392511, 0, 1, 0, 0.6392511, 0, -0.7689981, -14.81881, 9.479404, -12.266568)
+
+[node name="falling_stepstone4" parent="floor5" unique_id=2111316354 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.839193, 0, -0.5438336, 0, 1, 0, 0.5438336, 0, -0.839193, -11.367467, 10.095686, -13.595273)
+
+[node name="floor6" type="StaticBody3D" parent="." unique_id=373008472]
+transform = Transform3D(0.9391961, 0, 0.34338105, 0, 1, 0, -0.34338105, 0, 0.9391961, 14.155184, 17.715864, -0.5528791)
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="floor6" unique_id=1893440411]
+transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, -18.445871, 5.9096518, -4.0830345)
+mesh = SubResource("BoxMesh_p2kwn")
+material = SubResource("StandardMaterial3D_pgt41")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="floor6" unique_id=337662490]
+shape = SubResource("ConcavePolygonShape3D_kf4bv")
+
+[node name="falling_stepstone" parent="floor6" unique_id=1791811332 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.22578429, 0, -0.9741773, 0, 1, 0, 0.9741773, 0, -0.22578429, -18.083023, 7.050878, -7.9219656)
+
+[node name="falling_stepstone7" parent="floor6" unique_id=1483738354 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.037219316, 0, -0.99930704, 0, 1, 0, 0.99930704, 0, 0.037219316, -18.606276, 5.823433, 0.5859441)
+
+[node name="falling_stepstone2" parent="floor6" unique_id=1949019159 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.4947915, 0, -0.86901164, 0, 1, 0, 0.86901164, 0, -0.4947915, -16.8285, 8.418799, -10.154601)
+
+[node name="falling_stepstone3" parent="floor6" unique_id=1944238523 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.7689981, 0, -0.6392511, 0, 1, 0, 0.6392511, 0, -0.7689981, -14.81881, 9.479404, -12.266568)
+
+[node name="falling_stepstone4" parent="floor6" unique_id=105509488 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.839193, 0, -0.5438336, 0, 1, 0, 0.5438336, 0, -0.839193, -11.367467, 10.095686, -13.595273)
+
+[node name="floor7" type="StaticBody3D" parent="." unique_id=25865713]
+transform = Transform3D(0.64324206, 0, -0.76566285, 0, 1, 0, 0.76566285, 0, 0.64324206, 13.642241, 22.788683, 2.0115366)
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="floor7" unique_id=1652864277]
+transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, -18.445871, 5.9096518, -4.0830345)
+mesh = SubResource("BoxMesh_p2kwn")
+material = SubResource("StandardMaterial3D_pgt41")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="floor7" unique_id=1976911645]
+shape = SubResource("ConcavePolygonShape3D_kf4bv")
+
+[node name="falling_stepstone" parent="floor7" unique_id=378174681 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.22578429, 0, -0.9741773, 0, 1, 0, 0.9741773, 0, -0.22578429, -18.083023, 7.050878, -7.9219656)
+
+[node name="falling_stepstone7" parent="floor7" unique_id=1047090009 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.037219316, 0, -0.99930704, 0, 1, 0, 0.99930704, 0, 0.037219316, -18.606276, 5.823433, 0.5859441)
+
+[node name="falling_stepstone2" parent="floor7" unique_id=751777888 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.4947915, 0, -0.86901164, 0, 1, 0, 0.86901164, 0, -0.4947915, -16.8285, 8.418799, -10.154601)
+
+[node name="falling_stepstone3" parent="floor7" unique_id=1743868209 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.7689981, 0, -0.6392511, 0, 1, 0, 0.6392511, 0, -0.7689981, -14.81881, 9.479404, -12.266568)
+
+[node name="falling_stepstone4" parent="floor7" unique_id=1899998994 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.839193, 0, -0.5438336, 0, 1, 0, 0.5438336, 0, -0.839193, -11.367467, 10.095686, -13.595273)
+
+[node name="floor8" type="StaticBody3D" parent="." unique_id=1796069836]
+transform = Transform3D(-0.7852305, 0, -0.61920357, 0, 1, 0, 0.61920357, 0, -0.7852305, 4.1505175, 27.648657, -0.9270255)
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="floor8" unique_id=2109413994]
+transform = Transform3D(4.8135967, 0, 0, 0, 0.34465295, 0, 0, 0, 4.8978934, -18.445871, 5.9096518, -4.0830345)
+mesh = SubResource("BoxMesh_p2kwn")
+material = SubResource("StandardMaterial3D_pgt41")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="floor8" unique_id=791504387]
+shape = SubResource("ConcavePolygonShape3D_kf4bv")
+
+[node name="falling_stepstone" parent="floor8" unique_id=1801174603 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.22578429, 0, -0.9741773, 0, 1, 0, 0.9741773, 0, -0.22578429, -18.083023, 7.050878, -7.9219656)
+
+[node name="falling_stepstone7" parent="floor8" unique_id=1130838944 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(0.037219316, 0, -0.99930704, 0, 1, 0, 0.99930704, 0, 0.037219316, -18.606276, 5.823433, 0.5859441)
+
+[node name="falling_stepstone2" parent="floor8" unique_id=49787660 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.4947915, 0, -0.86901164, 0, 1, 0, 0.86901164, 0, -0.4947915, -16.8285, 8.418799, -10.154601)
+
+[node name="falling_stepstone3" parent="floor8" unique_id=1996489061 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.7689981, 0, -0.6392511, 0, 1, 0, 0.6392511, 0, -0.7689981, -14.81881, 9.479404, -12.266568)
+
+[node name="falling_stepstone4" parent="floor8" unique_id=157471934 instance=ExtResource("1_hq1ed")]
+transform = Transform3D(-0.839193, 0, -0.5438336, 0, 1, 0, 0.5438336, 0, -0.839193, -11.367467, 10.095686, -13.595273)
 
 [node name="player" parent="." unique_id=1145062898 instance=ExtResource("2_3m3eo")]
-transform = Transform3D(-0.9988434, 0, -0.04808279, 0, 1, 0, 0.04808279, 0, -0.9988434, -0.059096336, 0.84538174, -0.4327991)
+transform = Transform3D(0.9962885, 0, -0.08607761, 0, 1, 0, 0.08607761, 0, 0.9962885, 0.016042233, 0.5211489, -0.43641615)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1762679280]
 stream = ExtResource("3_3m3eo")
 volume_db = 10.717
 autoplay = true
-
-[node name="killzone" parent="." unique_id=1230838016 instance=ExtResource("4_kf4bv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5528145, 4.174157, -5.8052006)
 
 [node name="maze" parent="." unique_id=65304468 instance=ExtResource("5_ijw2f")]
 transform = Transform3D(0.97617877, 0, -0.21696782, 0, 1, 0, 0.21696782, 0, 0.97617877, 3.718011, 10.308179, -8.51072)
@@ -184,7 +307,7 @@ transform = Transform3D(0.97617877, 0, -0.21696782, 0, 1, 0, 0.21696782, 0, 0.97
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2058405952]
 transform = Transform3D(-0.9430659, -0.27156645, 0.19203699, 0.018024515, 0.53479576, 0.8447891, -0.33211693, 0.8001538, -0.49945262, 0.6118362, 6.629009, -0.0961039)
 light_color = Color(0.9455486, 0.9489903, 0.9934785, 1)
-light_energy = 2.444
+light_energy = 0.839
 light_indirect_energy = 16.0
 light_volumetric_fog_energy = 6.929
 light_size = 0.408
@@ -195,7 +318,7 @@ spot_angle = 60.51
 spot_angle_attenuation = 0.21022417
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=583645343]
-transform = Transform3D(-0.9430659, -0.27156645, 0.19203699, 0.018024515, 0.53479576, 0.8447891, -0.33211693, 0.8001538, -0.49945262, -1.4665432, 30.706871, 7.112323)
+transform = Transform3D(-0.94306594, -0.31328666, -0.111705005, 0.018024534, -0.3834929, 0.923368, -0.33211693, 0.86878395, 0.3673056, -2.1416988, 36.287796, 9.332353)
 light_color = Color(0.9455486, 0.9489903, 0.9934785, 1)
 light_energy = 2.444
 light_indirect_energy = 16.0
@@ -234,7 +357,7 @@ spot_angle = 60.51
 spot_angle_attenuation = 0.21022417
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=1583106001]
-transform = Transform3D(-0.9430659, -0.33231184, 0.013979526, 0.01802452, -0.009092659, 0.99979603, -0.33211693, 0.9431263, 0.014564693, 23.321194, 22.226189, 10.676305)
+transform = Transform3D(-0.9430659, -0.33231184, 0.013979526, 0.01802452, -0.009092659, 0.99979603, -0.33211693, 0.9431263, 0.014564693, 18.831951, 24.478512, 9.116228)
 light_color = Color(0.9455486, 0.9489903, 0.9934785, 1)
 light_energy = 2.444
 light_indirect_energy = 16.0
@@ -245,3 +368,63 @@ spot_range = 111.513
 spot_attenuation = 0.84
 spot_angle = 60.51
 spot_angle_attenuation = 0.21022417
+
+[node name="killzone" parent="." unique_id=1230838016 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8268867, -6.360647, -1.4846573)
+
+[node name="killzone2" parent="." unique_id=449054013 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.135323, -6.360647, -1.5526581)
+
+[node name="killzone3" parent="." unique_id=1029057663 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.135323, -6.360647, -12.521616)
+
+[node name="killzone4" parent="." unique_id=590946149 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9261684, -6.360647, -12.521616)
+
+[node name="killzone5" parent="." unique_id=1385319763 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9261684, -6.360647, -32.40602)
+
+[node name="killzone6" parent="." unique_id=2146316557 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.918633, -6.360647, -32.40602)
+
+[node name="killzone7" parent="." unique_id=1912774890 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.035526, -6.360647, -32.40602)
+
+[node name="killzone8" parent="." unique_id=862616795 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.035526, -6.360647, -12.467533)
+
+[node name="killzone9" parent="." unique_id=389894275 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.035526, -6.360647, 7.5537376)
+
+[node name="killzone10" parent="." unique_id=1070669969 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1173038, -6.360647, 7.5537376)
+
+[node name="killzone11" parent="." unique_id=1265417980 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.684177, -6.360647, 7.5537376)
+
+[node name="killzone12" parent="." unique_id=1059552066 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.684177, -6.360647, 27.460606)
+
+[node name="mazetopkillzone" parent="." unique_id=1077431839 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2070904, -6.360647, 27.460606)
+
+[node name="mazetopkillzone2" parent="." unique_id=551202858 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(0.97175956, 0, -0.23597325, 0, 1, 0, 0.23597325, 0, 0.97175956, 0.14317298, 16.777481, -9.835954)
+
+[node name="killzone20" parent="." unique_id=745914490 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(0.97175956, 0, -0.23597325, 0, 1, 0, 0.23597325, 0, 0.97175956, 8.381964, 16.92271, -7.8353205)
+
+[node name="killzone14" parent="." unique_id=412153780 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.382622, -6.360647, 27.460606)
+
+[node name="killzone15" parent="." unique_id=222793809 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.547714, -6.360647, 27.460606)
+
+[node name="killzone16" parent="." unique_id=30249834 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.547714, -6.360647, 7.326805)
+
+[node name="killzone17" parent="." unique_id=68897390 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.547714, -6.360647, -12.322134)
+
+[node name="killzone18" parent="." unique_id=1177349441 instance=ExtResource("4_kf4bv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.547714, -6.360647, -32.4859)
